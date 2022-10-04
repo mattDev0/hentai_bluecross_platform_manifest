@@ -21,6 +21,10 @@
           fetch="https://github.com/hentaiOS"
           revision="refs/heads/TwistedScarlett" />
 
+  <remote name="github/mattDev0"
+          fetch="https://github.com/mattDev0"
+          revision="refs/heads/TwistedScarlett" />        
+
   <remote name="gitlab/hentaiOS"
           fetch="https://gitlab.com/hentaiOS"
           revision="refs/heads/TwistedScarlett" />
@@ -54,6 +58,7 @@
   <remove-project name="platform/hardware/qcom/sm7250/display" />
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <remove-project name="platform/hardware/qcom/sm7250/gps" />
+  <remove-project name="platform/hardware/qcom/sdm845/display" />
 
   <!-- hentaiOSのスタート -->
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
@@ -67,7 +72,7 @@
   </project>
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="github/hentaiOS" />
   <project path="external/json-c" name="platform_external_json-c" groups="pdk" remote="github/hentaiOS" />
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github/hentaiOS" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github/mattDev0" />
   <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="github/hentaiOS" />
   <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="github/hentaiOS" >
     <!-- add guard for AOSP hardware/qcom dir -->
@@ -81,6 +86,7 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
   </project>
   <project path="hardware/qcom/sm7250/display" name="platform_hardware_qcom_sm7250_display" groups="pdk" remote="github/hentaiOS" />
+  <project path="hardware/qcom/sdm845/display" name="platform_hardware_qcom_sdm845_display" groups="pdk" remote="github/mattDev0" />
   <project path="hardware/qcom/sm7250/media" name="platform_hardware_qcom_sm7250_media" groups="pdk" remote="github/hentaiOS" />
   <project path="hardware/qcom/sm7250/gps" name="platform_hardware_qcom_sm7250_gps" groups="pdk" remote="github/hentaiOS" >
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7250/Android.mk" />
@@ -90,7 +96,8 @@
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/hentaiOS" clone-depth="1"/>
-  <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/hentaiOS" />
+  <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/mattDev0" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" groups="vendor" remote="github/mattDev0" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" groups="vendor" remote="github/hentaiOS" />
@@ -101,4 +108,10 @@
   <!-- Additions from LineageOS -->
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="github/LineageOS" />
   <project path="prebuilts/tools-hentai" name="android_prebuilts_tools-lineage" remote="github/LineageOS" />
+
+<!-- Device repos -->
+  <project path="device/google/crosshatch" name="device_google_crosshatch" remote="github/mattDev0" />
+  <project path="device/google/crosshatch-sepolicy" name="device_google_crosshatch-sepolicy" remote="github/mattDev0" />
+  <project path="vendor/google" name="vendor_google" clone-depth="1" remote="github/mattDev0" />
+  <project path="device/google/crosshatch-kernel" name="device_google_crosshatch-kernel" clone-depth="1" remote="github/mattDev0" />
 </manifest>
