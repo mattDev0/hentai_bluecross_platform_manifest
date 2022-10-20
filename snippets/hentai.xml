@@ -29,6 +29,10 @@
           fetch="https://gitlab.com/hentaiOS"
           revision="refs/heads/TwistedScarlett" />
 
+  <remote name="gitlab/mattDev0"
+          fetch="https://gitlab.com/mattDev0"
+          revision="refs/heads/TwistedScarlett" />
+
   <remote name="github/LineageOS"
           fetch="https://github.com/LineageOS"
           revision="refs/heads/lineage-18.1" />
@@ -63,6 +67,7 @@
   <remove-project name="platform/hardware/qcom/sm7250/media" />
   <remove-project name="platform/hardware/qcom/sm7250/gps" />
   <remove-project name="platform/hardware/qcom/sdm845/display" />
+  <remove-project name="platform/packages/modules/Connectivity" />
 
   <!-- hentaiOSのスタート -->
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
@@ -90,7 +95,7 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
   </project>
   <project path="hardware/qcom/sm7250/display" name="platform_hardware_qcom_sm7250_display" groups="pdk" remote="github/hentaiOS" />
-  <project path="hardware/qcom/sdm845/display" name="platform_hardware_qcom_sdm845_display" groups="pdk" remote="github/mattDev0" />
+  <project path="hardware/qcom/sdm845/display" name="platform_hardware_qcom_sdm845_display" groups="generic_fs,qcom_sdm845" remote="github/mattDev0" />
   <project path="hardware/qcom/sm7250/media" name="platform_hardware_qcom_sm7250_media" groups="pdk" remote="github/hentaiOS" />
   <project path="hardware/qcom/sm7250/gps" name="platform_hardware_qcom_sm7250_gps" groups="pdk" remote="github/hentaiOS" >
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7250/Android.mk" />
@@ -98,8 +103,9 @@
   </project>
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/mattDev0" />
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="github/mattDev0" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" groups="vendor" remote="github/hentaiOS" />
-  <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/hentaiOS" clone-depth="1"/>
+  <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/mattDev0" clone-depth="1"/>
   <project path="vendor/hentai" name="platform_vendor_hentai" groups="vendor" remote="github/mattDev0" />
   <project path="vendor/pixel-framework" name="vendor_pixel-framework" groups="vendor" remote="github/mattDev0" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="vendor" remote="github/hentaiOS" />
@@ -116,6 +122,6 @@
 <!-- Device repos -->
   <project path="device/google/crosshatch" name="device_google_crosshatch" remote="github/mattDev0" />
   <project path="device/google/crosshatch-sepolicy" name="device_google_crosshatch-sepolicy" remote="github/mattDev0" />
-  <project path="vendor/google" name="vendor_google" clone-depth="1" remote="github/mattDev0" />
+  <project path="vendor/google" name="vendor_bluecross" clone-depth="1" remote="github/mattDev0" />
   <project path="device/google/crosshatch-kernel" name="device_google_crosshatch-kernel" clone-depth="1" remote="github/mattDev0" />
 </manifest>
