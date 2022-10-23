@@ -124,6 +124,6 @@
 <!-- Device repos -->
   <project path="device/google/crosshatch" name="device_google_crosshatch" remote="github/mattDev0" />
   <project path="device/google/crosshatch-sepolicy" name="device_google_crosshatch-sepolicy" remote="github/mattDev0" />
-  <project path="vendor/google" name="vendor_bluecross" clone-depth="1" remote="github/mattDev0" />
+  <project path="vendor/google" name="vendor_google" clone-depth="1" remote="github/mattDev0" />
   <project path="device/google/crosshatch-kernel" name="device_google_crosshatch-kernel" clone-depth="1" remote="github/mattDev0" />
 </manifest>
