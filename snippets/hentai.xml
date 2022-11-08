@@ -69,6 +69,7 @@
   <remove-project name="platform/hardware/qcom/sdm845/display" />
   <remove-project name="platform/packages/modules/Connectivity" />
   <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/packages/apps/Settings" />
 
   <!-- hentaiOSのスタート -->
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
@@ -102,6 +103,7 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7250/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom/sm7250/Android.bp" />
   </project>
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="github/mattDev0" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/mattDev0" />
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="github/mattDev0" />
