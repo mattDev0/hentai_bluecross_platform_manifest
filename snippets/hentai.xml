@@ -103,6 +103,7 @@
   </project>
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="github/mattDev0" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/mattDev0" />
+  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="github/mattDev0" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" groups="vendor" remote="github/hentaiOS" />
