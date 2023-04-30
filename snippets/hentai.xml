@@ -33,6 +33,10 @@
           fetch="https://gitlab.com/mattDev0"
           revision="refs/heads/TwistedScarlett" />
 
+  <remote name="gitlab/PixelBoot"
+          fetch="https://gitlab.com/PixelBoot"
+          revision="refs/heads/thirteen" />
+
   <remote name="github/LineageOS"
           fetch="https://github.com/LineageOS"
           revision="refs/heads/lineage-18.1" />
@@ -115,6 +119,7 @@
   <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" groups="vendor" remote="github/hentaiOS" />
   <project path="hardware/qcom-caf/bt" name="platform_hardware_qcom-caf_bt" groups="pdk" remote="github/hentaiOS" />
   <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom-caf_wlan" groups="pdk" remote="github/hentaiOS" />
+  <project path="packages/apps/GoogleCamera" name="packages_apps_GoogleCamera" groups="vendor" remote="gitlab/PixelBoot" clone-depth="1"/>
 
   <!-- Additions from LineageOS -->
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="github/LineageOS" />
